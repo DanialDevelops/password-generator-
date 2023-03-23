@@ -6,6 +6,7 @@ var special =  [' ', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',',
 var errorMessages = [];
 var connectCharacter = [];
 var generateBtn = document.querySelector("#generate");
+var show = document.querySelector('.errorlist')
 
 
 function generatePassword(){
@@ -13,6 +14,9 @@ function generatePassword(){
   var length =  Math.round(prompt("Please pick a length between 8-128 characters"))
   var characters =  confirm("would you like to include lowercase, uppercase, numeric? ")
   var specialChars =  confirm("Would you like special characters?")
+
+  clearError();
+  var password = [];
 
   errorMessages = []
   if (!length || length < 8 || length > 128){
@@ -46,8 +50,6 @@ function generatePassword(){
 }
 
 
-
-
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -58,3 +60,17 @@ function writePassword() {
 
 
 generateBtn.addEventListener("click", writePassword);
+
+function showError(errorMessages){
+    
+  for(var i = 0; i < errorMessages.length; ++i){
+    var li = document.createElement("li")
+    show.appendChild(li).innerText = errorMessages[i];
+  }
+}
+
+function clearError(){
+  while(show.children[0] != null){
+    show.removeChild(show.children[0]);
+  }
+}

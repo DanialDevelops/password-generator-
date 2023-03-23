@@ -118,6 +118,11 @@ button[disabled] {
   overflow: hidden;
 }
 
+.errormessages{
+  color: red;
+  text-align: left;
+}
+
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
