@@ -13,5 +13,5 @@ In this project I worked on making a password generator using javascript that wi
 
 -worked with prompts and confirms 
 
-### Image example of my site!
-[passwordt_1](https://user-images.githubusercontent.com/126214677/227324225-213f0ca0-179e-41b3-b6a8-6b4aeff9caa8.png)
+### Image example of my site
+![passwordt_1](https://user-images.githubusercontent.com/126214677/227324225-213f0ca0-179e-41b3-b6a8-6b4aeff9caa8.png)
