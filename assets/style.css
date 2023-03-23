@@ -118,7 +118,7 @@ button[disabled] {
   overflow: hidden;
 }
 
-.errormessages{
+.errorlist{
   color: red;
   text-align: left;
 }
