@@ -4,6 +4,7 @@ var lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 var uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 var special =  [' ', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~'];
 var errorMessages = [];
+var connectCharacter = [];
 var generateBtn = document.querySelector("#generate");
 
 
@@ -26,6 +27,21 @@ function generatePassword(){
     showError(errorMessages)
     return
   }
+
+  if(characters){
+    connectCharacter.push(...lowercase, ...uppercase, ...numbers)
+  }
+
+  if(specialChars){
+    connectCharacter.push(...special)
+  }
+
+  for(var i = 0; i < length; i++){
+    password.push(connectCharacter[Math.floor(Math.random() * connectCharacter.length)])
+  }
+
+  return password.join('');
+
 
 }
 
